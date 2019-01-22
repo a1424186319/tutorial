@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>利用JavaScript验证是否符合电子邮箱地址</title>
+</head>
+<script type="text/javascript">
+
+    function validate_email(field, alerttxt) {
+        with (field) {
+            apos = value.indexOf("@");
+            dotpos = value.lastIndexOf(".");
+            if (apos < 1 || dotpos - apos < 2) {
+                alert(alerttxt);
+                return false;
+            } else {
+               // 邮箱地址符合
+                return true;
+            }
+        }
+    }
+    function validate_form(thisform) {
+        with (thisform) {
+            if (validate_email(email, "邮箱格式不正确!") == false) {
+                // 利用focus()将输入焦点移至对象上
+                email.focus();
+                return false;
+            }
+        }
+    }
+</script>
+<body>
+    <form action="https://www.baidu.com" onsubmit="return validate_form(this);" enctype="multipart/form-data">
+        请输入邮箱: <input type="text" name="email"> <input type="submit" value="确认提交">
+    </form>
+
+</body>
+
+</html>

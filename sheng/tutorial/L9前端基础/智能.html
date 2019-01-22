@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="textml; charset=utf-8">
+<head>
+
+	<title>智能家居灯控</title>
+	<style type="text/css">
+<!--
+	body,td,th{font-family: 微软雅黑;font-size: 14px;}
+	body {background-color: #404040;background-image: url(images/bg.jpg);margin-left: 0px;margin-top: 0px;margin-right: 0px;margin-bottom: 0px;background-repeat: repeat-x;background-position: center 0px;}
+	.light{height: 520px;width:340px;margin-right: auto;margin-left: auto;position: relative;}
+	.light_btm{background-image: url(images/light_btm_bg.png);background-repeat: no-repeat;background-position: center 0px;height: 212px;width:366px;margin-right: auto;margin-left: auto;position: relative;z-index: 100;top: -82px;text-align: center;}
+	.light_btm  img{height: 55px;width: 55px;margin-top: 30px;}
+	.select{width: 424px;margin-right: auto;margin-left: auto;position: relative;z-index: 200;top: -120px;overflow: hidden;}
+	.tips{font-size: 12px;line-height: 20px;color: #999;text-align: center;position: relative;z-index: 300;height: 20px;top: -100px;width: 100%;}
+	ul,li{margin: 0px;padding: 0px;list-style-type: none;}
+	.select li{height: 66px;width: 64px;margin-right: 26px;float: left;}
+	.select ul{width: 460px;overflow: hidden;}
+	.title{font-size: 20px;line-height: 20px;color: #888;font-weight: bold;height: 20px;margin-left: 20px;padding-top: 28px;}
+	-->
+	</style>
+	</head>
+<body>
+<div class="title">智能家居灯控</div>
+<div class="light"><img id="lightHeader" src="images/l-close.png"></div>
+<div class="light_btm" onclick="lightOnOff()" title="点击按钮开关智能灯"><img id="lightBottom" src="images/switch-close.png"></div>
+<div class="select">
+	<ul>
+
+		<li><img id="li-red" src="images/off-red.png"></li>
+		<li><img id="li-yellow"onclick="yellow()" src="images/off-yellow.png"></li>
+		<li><img id="li-blue" onclick="blue()" src="images/off-blue.png"></li>
+		<li><img id="li-green" onclick="green()" src="images/off-green.png"></li>
+		<li><img id="li-purple" onclick="purpleOn()" src="images/off-purple.png"></li>
+	</ul>
+</div>
+<div class="tips">点击开关开启:点击下边颜色按钮可以换色</div>
+
+<script type="text/javascript" src="jquery.min.js"></script>
+
+<script type="text/javascript">
+	function lightInit() {
+
+
+		 $("#lightHeader").attr("src","images/l-close.png");
+		 $("#lightBottom").attr("src","images/switch-close.png");
+
+         $("#li-red").attr("src","images/off-red.png");
+         $("#li-yellow").attr("src","images/off-yellow.png");
+         $("#li-blue").attr("src","images/off-blue.png");
+         $("#li-green").attr("src","images/off-green.png");
+         $("#li-purple").attr("src","images/off-purple.png");
+	}
+	function lightOnOff(){
+
+        if ($("#lightHeader").attr("src")!="images/l-close.png")
+        {lightInit();}
+        else{
+        $("#lightHeader").attr("src","images/l_red.png");
+        $("#lightBottom").attr("src","images/switch-red.png");
+        $("#li-red").attr("src","images/on-red.png");
+        }
+	}
+
+	function purpleOn(){
+		if ($("#lightHeader").attr("src")=="images/l-close.png") {
+			alert("灯只能在开的状态下，才能切换");
+			return;
+		}
+		lightInit();
+		$("#lightHeader").attr("src","images/l-purple.png");
+		$("#lightBottom").attr("src","images/switch-purple.png");
+		$("#li-purple").attr("src","images/on-purple.png");
+	}
+
+function yellow(){
+		if ($("#lightHeader").attr("src")=="images/l-close.png") {
+			alert("灯只能在开的状态下，才能切换");
+			return;
+		}
+		lightInit();
+		$("#lightHeader").attr("src","images/l-yellow.png");
+		$("#lightBottom").attr("src","images/switch-yellow.png");
+		$("#li-yellow").attr("src","images/on-yellow.png");
+	}
+	function blue(){
+		if ($("#lightHeader").attr("src")=="images/l-close.png") {
+			alert("灯只能在开的状态下，才能切换");
+			return;
+		}
+		lightInit();
+		$("#lightHeader").attr("src","images/l-blue.png");
+		$("#lightBottom").attr("src","images/switch-blue.png");
+		$("#li-blue").attr("src","images/on-blue.png");
+	}
+	function green(){
+		if ($("#lightHeader").attr("src")=="images/l-close.png") {
+			alert("灯只能在开的状态下，才能切换");
+			return;
+		}
+		lightInit();
+		$("#lightHeader").attr("src","images/l-green.png");
+		$("#lightBottom").attr("src","images/switch-green.png");
+		$("#li-green").attr("src","images/on-green.png");
+	}
+
+    lightInit();
+</script>
+</body>
+<html>

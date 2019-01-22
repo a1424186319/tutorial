@@ -1,0 +1,17 @@
+body{
+    background-color: #98aeff;
+    background-image:url("demo2.jpg") ;
+    background-repeat: repeat-x;
+    background-position: center;
+    background-attachment: fixed;
+    background-size:10%;
+}
+
+p
+{
+    color:cornsilk;
+    font-size:15px;
+    text-align:left;
+    text-indent:10px;
+
+}

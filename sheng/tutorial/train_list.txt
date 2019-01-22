@@ -1,0 +1,11 @@
+lol.exe
+SOFT_REPAIR
+Ó¢ĞÛÁªÃË.lnk
+·ÃÎÊ¹ÙÍø.url
+2017-08-26_07-22-18_LeagueClientUxRender.log
+2017-09-21_21-22-39_LeagueClientUxRender.log
+2018-11-10-10-32-46.dmp.z
+api-ms-win-core-console-l1-1-0.dll
+AppLib.json
+AppList.cfg
+res.vfs

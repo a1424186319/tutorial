@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="中文">
+<head>
+    <meta charset="UTF-8">
+    <title>js控制语句</title>
+    <script>
+        //if 语句
+        var score = 60;
+        if (score >= 60){
+            // alert("及格");
+            console.log("及格")  // js控制台输出信息
+        }
+        else if (score >= 70){
+            alert("优秀")
+        }
+        else {
+            alert("不及格")
+        }
+
+       // switch 语句
+        var level = 2;
+        var msg = "";
+        switch (level) {
+            case 1:
+                msg = "普通会员";
+            case 2:
+                msg = "vip";
+            default:
+                msg = "其他情况";
+        }
+        console.log(msg);
+
+        //for 循环
+        for(var i=0;i<10;i++){
+            console.log(i)
+            document.write(i + "<br>")
+        }
+
+        // while 循环
+        var i = 0;
+        while (i<10){
+            console.log(i);
+            i++;
+        }
+
+        // continue
+        for(var i=0;i<10;i++){
+            if (i==3){continue};
+            document.write(i+"<br>")
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
